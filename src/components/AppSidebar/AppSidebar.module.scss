@@ -1,0 +1,12 @@
+@import '../../assets/styles/variables';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+  background-color: rgb(87, 87, 87);
+  padding: 20px;
+  color: white;
+  min-height: calc(100vh - $header-min-height);
+}

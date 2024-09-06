@@ -1,0 +1,12 @@
+@import '../../assets/styles/variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: $header-min-height;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}

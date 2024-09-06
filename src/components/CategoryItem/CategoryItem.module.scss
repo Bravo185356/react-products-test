@@ -1,0 +1,11 @@
+@import '../../assets/styles/variables';
+
+.link {
+  color: white;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &.selected {
+    color: $blue-color;
+  }
+}

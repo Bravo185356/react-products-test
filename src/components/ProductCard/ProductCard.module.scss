@@ -1,0 +1,113 @@
+@import '../../assets/styles/variables';
+
+.productCard {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px rgb(189, 189, 189);
+  transition: box-shadow 0.2s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 20px;
+  height: 535px;
+
+  &:has(*:focus),
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px rgb(163, 163, 163);
+
+    .topControls {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.topControls {
+  display: flex;
+  gap: 5px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+
+.controls {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin-top: 20px;
+  flex: 1 1 auto;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.icon {
+  background-color: $blue-color;
+  padding: 5px;
+  border-radius: 50%;
+  border: 0;
+  transition: background-color 0.2s ease;
+  font-size: 18px;
+  color: white;
+
+  &:hover {
+    background-color: $blue-color-hover;
+  }
+}
+
+.iconFlat {
+  font-size: 22px;
+
+  &:hover,
+  &.active {
+    color: $blue-color;
+  }
+}
+
+.description {
+  overflow: hidden;
+  position: relative;
+  height: 85px;
+
+  &::after {
+    content: '';
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1.4em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+    pointer-events: none;
+  }
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.productImg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
